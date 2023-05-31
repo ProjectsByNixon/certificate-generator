@@ -11,6 +11,7 @@ import {
 	getTemplateFromJsonFile,
 	readFile,
 } from "./helper";
+import ShowPdf from "./showpdf";
 
 function App() {
 	const designerRef = useRef<HTMLDivElement | null>(null);
@@ -148,7 +149,7 @@ ${e}`);
 				<span style={{ margin: "0 1rem" }}>/</span>
 				<button onClick={onGeneratePDF}>Generate PDF</button>
 			</header>
-			<div ref={designerRef} />
+			<ShowPdf designerRef={designerRef} />
 		</div>
 	);
 }
